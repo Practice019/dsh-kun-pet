@@ -1,0 +1,6 @@
+# Kun Like 桌宠 - DSH 静态插件（bundle patch 层）
+# DSH 启动时自动加载 Host 半（lib/index.js），
+# Client 半由 dsh.client 声明自动注册到浏览器模块表。
+- insert:
+    - id: kun-like-pet
+      name: 'dsh-kun-like-pet'
