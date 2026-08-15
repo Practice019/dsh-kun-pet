@@ -52,7 +52,7 @@
 | 功能 | 说明 |
 |------|------|
 | 🎭 9种动画状态 | idle、working、review、waiting、failed、celebrating、runRight、runLeft、wave/jump |
-| 🔊 单端语音播放 | 任务完成由 Host PowerShell 完整播放一次（不依赖浏览器焦点） |
+| 🔊 单端语音播放 | 每个对话窗口停止输出时由 Host PowerShell 各播放一次（多窗口各自触发，不依赖浏览器焦点） |
 | 🖱️ 拖拽移动 | 按住桌宠拖动到任意位置 |
 | 👆 点击互动 | 点击桌宠挥手打招呼 |
 
@@ -117,7 +117,7 @@ dsh plugin --profile web remove dsh-kun-like-pet
 
 ### 声音播放
 
-- **任务完成**：Host 端 PowerShell 系统级播放**一次**（完整播放，等待播放结束才关闭；需要 Windows PresentationCore）
+- **任务完成**：Host 端 PowerShell 系统级播放（完整播放，等待播放结束才关闭；需要 Windows PresentationCore）；多窗口同时工作时，**每个窗口停止输出都会各自播放一次**
 - **点击小鸡**：浏览器 Audio 即时播放（交互反馈）
 
 ---

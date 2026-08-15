@@ -1,6 +1,6 @@
 {
   "name": "dsh-kun-like-pet",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Kun Like 桌宠 —— DeepSeek Harness 桌面宠物插件：Web 界面右下角的小坤宠，随 Agent 工作状态切换 9 种动画，任务完成时播放「你干嘛~哎哟」语音",
   "type": "module",
   "main": "lib/index.js",
