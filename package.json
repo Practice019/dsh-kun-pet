@@ -24,6 +24,10 @@
     "桌宠"
   ],
   "license": "MIT",
+  "author": {
+    "name": "Practice019",
+    "url": "https://github.com/Practice019"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Practice019/dsh-kun-like-pet.git"

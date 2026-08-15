@@ -2,9 +2,12 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/DSH-Plugin-4B32C3" alt="DSH Plugin">
+  <img src="https://img.shields.io/npm/v/dsh-kun-like-pet" alt="npm version">
+  <img src="https://img.shields.io/npm/dm/dsh-kun-like-pet" alt="npm downloads">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
   <img src="https://img.shields.io/github/stars/Practice019/dsh-kun-like-pet" alt="Stars">
   <br>
+  <a href="https://www.npmjs.com/package/dsh-kun-like-pet">npm 主页</a> ·
   <a href="https://github.com/Practice019/dsh-kun-like-pet">GitHub 仓库</a> ·
   <a href="#-一键安装静态插件">安装指南</a> ·
   <a href="#-常见问题">常见问题</a>
@@ -66,14 +69,24 @@
 ### 安装命令
 
 ```bash
-# 方式 1：从本地目录安装
-dsh plugin --profile web add ./dsh-kun-like-pet
+# 方式 1（推荐）：从 npm registry 一键安装
+dsh plugin --profile web add dsh-kun-like-pet
 
 # 方式 2：从 Git 仓库安装
 dsh plugin --profile web add github:Practice019/dsh-kun-like-pet
+
+# 方式 3：本地开发（link 模式，改代码重启即生效）
+dsh plugin --profile web add ./dsh-kun-like-pet
 ```
 
 安装后**重启 DSH** 即可，桌宠会自动出现在 Web 界面右下角，无需任何手动激活步骤。
+
+### 更新插件
+
+```bash
+# 检查并更新到最新版本
+dsh plugin update dsh-kun-like-pet
+```
 
 ### 安装原理
 
@@ -184,7 +197,7 @@ dsh-kun-like-pet/
 **解决方案**：
 - 确认系统为 Windows（需要 PowerShell + WPF 运行时）
 - 检查 `node_modules/dsh-kun-like-pet/assets/voice.mp3` 是否存在
-- 手动测试：`powershell -c "Add-Type -AssemblyName PresentationCore; $p = New-Object System.Windows.Media.MediaPlayer; $p.Open([uri]'file:///D:/test/ai_study/1/dsh-kun-like-pet/assets/voice.mp3'); $p.Play(); Start-Sleep -Seconds 5"`
+- 手动测试：`powershell -c "Add-Type -AssemblyName PresentationCore; $p = New-Object System.Windows.Media.MediaPlayer; $p.Open([uri]'file:///D:/test/ai_study/dsh-kun-like-pet/assets/voice.mp3'); $p.Play(); Start-Sleep -Seconds 5"`
 
 ### 1b. 声音被截断 / 播放两次
 

@@ -1,9 +1,12 @@
-// 生成 README 展示图片：docs/logo.png、docs/preview.gif、docs/states.png
+// 生成 README 展示图片：docs/logo.png、docs/preview-sequence.png、docs/states.png
 import sharp from 'file:///D:/npm-global/node_modules/@deepseek-ai/dsh/node_modules/sharp/dist/index.mjs'
 import { writeFileSync, mkdirSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 
-const SPRITE = 'D:/test/ai_study/1/dsh-kun-like-pet/assets/spritesheet.webp'
-const DOCS = 'D:/test/ai_study/1/dsh-kun-like-pet/docs'
+// 基于脚本位置定位项目根，目录移动后无需修改
+const ROOT = fileURLToPath(new URL('..', import.meta.url))
+const SPRITE = ROOT + 'assets/spritesheet.webp'
+const DOCS = ROOT + 'docs'
 mkdirSync(DOCS, { recursive: true })
 
 const CW = 192, CH = 208
