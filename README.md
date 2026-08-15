@@ -1,6 +1,16 @@
 # 🐔 Kun Like 桌宠 - DSH 桌面宠物插件
 
 <p align="center">
+  <img src="https://img.shields.io/badge/DSH-Plugin-4B32C3" alt="DSH Plugin">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+  <img src="https://img.shields.io/github/stars/Practice019/dsh-kun-like-pet" alt="Stars">
+  <br>
+  <a href="https://github.com/Practice019/dsh-kun-like-pet">GitHub 仓库</a> ·
+  <a href="#-一键安装静态插件">安装指南</a> ·
+  <a href="#-常见问题">常见问题</a>
+</p>
+
+<p align="center">
   <img src="docs/logo.png" alt="Kun Like 桌宠" width="192" height="208">
 </p>
 
@@ -60,7 +70,7 @@
 dsh plugin --profile web add ./dsh-kun-like-pet
 
 # 方式 2：从 Git 仓库安装
-dsh plugin --profile web add github:linxin666/dsh-kun-like-pet
+dsh plugin --profile web add github:Practice019/dsh-kun-like-pet
 ```
 
 安装后**重启 DSH** 即可，桌宠会自动出现在 Web 界面右下角，无需任何手动激活步骤。
