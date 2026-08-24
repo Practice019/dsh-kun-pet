@@ -2,12 +2,12 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/DSH-Plugin-4B32C3" alt="DSH Plugin">
-  <img src="https://img.shields.io/npm/v/dsh-kun-like-pet" alt="npm version">
-  <img src="https://img.shields.io/npm/dm/dsh-kun-like-pet" alt="npm downloads">
+  <img src="https://img.shields.io/npm/v/dsh-kun-pet" alt="npm version">
+  <img src="https://img.shields.io/npm/dm/dsh-kun-pet" alt="npm downloads">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
   <img src="https://img.shields.io/github/stars/Practice019/dsh-kun-like-pet" alt="Stars">
   <br>
-  <a href="https://www.npmjs.com/package/dsh-kun-like-pet">npm 主页</a> ·
+  <a href="https://www.npmjs.com/package/dsh-kun-pet">npm 主页</a> ·
   <a href="https://github.com/Practice019/dsh-kun-like-pet">GitHub 仓库</a> ·
   <a href="#-一键安装静态插件">安装指南</a> ·
   <a href="#-常见问题">常见问题</a>
@@ -70,7 +70,7 @@
 
 ```bash
 # 方式 1（推荐）：从 npm registry 一键安装
-dsh plugin --profile web add dsh-kun-like-pet
+dsh plugin --profile web add dsh-kun-pet
 
 # 方式 2：从 Git 仓库安装
 dsh plugin --profile web add github:Practice019/dsh-kun-like-pet
@@ -85,7 +85,7 @@ dsh plugin --profile web add ./dsh-kun-like-pet
 
 ```bash
 # 检查并更新到最新版本
-dsh plugin update dsh-kun-like-pet
+dsh plugin update dsh-kun-pet
 ```
 
 ### 安装原理
@@ -102,7 +102,7 @@ dsh plugin add  →  pnpm 安装包
 ### 卸载
 
 ```bash
-dsh plugin --profile web remove dsh-kun-like-pet
+dsh plugin --profile web remove dsh-kun-pet
 ```
 
 ---
@@ -197,7 +197,7 @@ dsh-kun-like-pet/
 
 **解决方案**：
 - 确认系统为 Windows（需要 PowerShell + WPF 运行时）
-- 检查 `node_modules/dsh-kun-like-pet/assets/voice.mp3` 是否存在
+- 检查 `node_modules/dsh-kun-pet/assets/voice.mp3` 是否存在
 - 手动测试：`powershell -c "Add-Type -AssemblyName PresentationCore; $p = New-Object System.Windows.Media.MediaPlayer; $p.Open([uri]'file:///D:/test/ai_study/dsh-kun-like-pet/assets/voice.mp3'); $p.Play(); Start-Sleep -Seconds 5"`
 
 ### 1b. 声音被截断 / 播放两次
@@ -213,7 +213,7 @@ dsh-kun-like-pet/
 **原因**：资源文件读取失败，或 Host 插件未生效（`/kun-pet/state` 返回 HTML 而非 JSON）
 
 **解决方案**：
-- 检查 `node_modules/dsh-kun-like-pet/assets/` 目录是否存在精灵图文件
+- 检查 `node_modules/dsh-kun-pet/assets/` 目录是否存在精灵图文件
 - 确认 Host 插件注入了 `webServer` 服务（`lib/index.js` 的 `inject: ['timer', 'webServer']`），否则启动早期服务未就绪时插件会静默退出
 - 重启 DSH 后测试 `http://127.0.0.1:3080/kun-pet/state` 是否返回 JSON
 
