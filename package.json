@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Practice019/dsh-kun-like-pet.git"
+    "url": "git+https://github.com/Practice019/dsh-kun-pet.git"
   },
   "dsh": {
     "bundle": {
